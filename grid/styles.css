@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-template: 50px 50px / 50px 50px 50px;
+    /*
+    short term for grid-template rows AND columns. Separated with a slash
+    Row first, column seconds
+    */
+}
