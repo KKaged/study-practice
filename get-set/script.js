@@ -20,8 +20,10 @@ let user = {
     [this.name, this.surname] = value.split(" ");
   },
 };
+console.log(user.fullName); //Output is "George Lopez"
 
-user.fullName = "John Bradshaw";
+user.fullName = "John Bradshaw"; //Sets the fullname to "John Bradshaw" with the set funciton
+console.log(user.fullName); //Output is "John Bradshaw"
 
-console.log(user.name);
-console.log(user.surname);
+console.log(user.name); //Output is "John"
+console.log(user.surname); //Output is "Bradshaw"
