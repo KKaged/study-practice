@@ -35,3 +35,17 @@ class person {
 }
 let profile = new person("John");
 console.log(profile.name);
+
+class Car {
+  drive() {
+    console.log("You drive the car!");
+  }
+  brake() {
+    console.log("You step on the break!");
+  }
+}
+
+let car = new Car();
+
+car.drive();
+car.break();
