@@ -1,51 +1,43 @@
+//Classes are "blueprints" for creating objects.
+//             Define properties and/or methods.
 class User {
-  constructor(name, age, location) {
-    this.name = name;
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
     this.age = age;
-    this.location = location;
   }
-
-  greetings() {
-    console.log(
-      `Hello ${this.name}, You are ${this.age} years old. You currently live in ${this.location}`
-    );
+  set first(value) {
+    this.firstName = value.toUpperCase();
+  }
+  set last(value) {
+    this.lastName = value.toUpperCase();
+  }
+  get fullName() {
+    return this.firstName + " " + this.lastName;
   }
 }
 
-let user = new User("John", 21, "Los Angeles, California");
-let user1 = new User("Jose", 37, "Moscow, Russia");
-user.greetings();
-user1.greetings();
-
-class person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  get name() {
-    return this._name;
-  }
-  set name(value) {
-    if (value.length < 4) {
-      console.log("Name is too short");
-      return;
-    }
-    return (this._name = value);
-  }
-}
-let profile = new person("John");
-console.log(profile.name);
+let user = new user("John", "Smith");
+console.log(user.fullName);
 
 class Car {
+  constructor(make, model, year, color) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+  } //Constructor used to make new objects
   drive() {
     console.log("You drive the car!");
   }
   brake() {
     console.log("You step on the break!");
-  }
+  } //Methods
 }
 
-let car = new Car();
+let car1 = new Car("Lamborghini", "Urus", 2022, "White"); //Using constructor to create a new car
+let car2 = new Car("Mercedes", "AMG GT", 2021, "Black");
 
-car.drive();
-car.break();
+car1.drive();
+car2.brake();
+console.log(car1.make);
