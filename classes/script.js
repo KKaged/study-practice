@@ -1,10 +1,11 @@
 //Classes are "blueprints" for creating objects.
 //             Define properties and/or methods.
+// Getters/Setters are a way to get/set the properties of an object
+//Secures better data quality
 class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
+  constructor(first, last) {
+    this.first = first;
+    this.last = last;
   }
   set first(value) {
     this.firstName = value.toUpperCase();
@@ -17,7 +18,7 @@ class User {
   }
 }
 
-let user = new user("John", "Smith");
+let user = new User("John", "Smith");
 console.log(user.fullName);
 
 class Car {
