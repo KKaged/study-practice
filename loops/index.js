@@ -50,9 +50,15 @@ while (question !== "quit" && question !== "q") {
     list.push(newItem);
     console.log(`${newItem} was added to the list!`);
   } else if (question === "delete") {
-    const remove = prompt("Enter the index of the item you want to delete.");
-    console.log(`You removed "${list[remove]}"`);
-    list.splice(remove, 1);
+    const remove = parseInt(
+      prompt("Enter the index of the item you want to delete.")
+    );
+    if (!Number.isNaN(remove)) {
+      console.log(`You removed "${list[remove]}"`);
+      list.splice(remove, 1);
+    } else {
+      console.log("Unkown Index.");
+    }
   }
   question = prompt("What would you like to do?");
 }
