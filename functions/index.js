@@ -72,3 +72,32 @@ function makeBetweenFunc(min, max) {
     return num <= max && num >= min;
   };
 }
+
+// Creating Function Methods
+
+const math = {
+  multiply: function (x, y) {
+    return x * y;
+  },
+  divide: function (x, y) {
+    return x / y;
+  },
+  add: function (x, y) {
+    return x + y;
+  },
+};
+math.add(1, 8); // 9
+math.multiply(3, 2); //6
+math.divide(6, 2); //3
+//Shorthand
+const greetings = {
+  morning(name) {
+    return "Good Morning, " + name;
+  },
+  afternoon(name) {
+    return "Good Afternoon, " + name;
+  },
+  night(name) {
+    return "Good Evening, " + name;
+  },
+};
