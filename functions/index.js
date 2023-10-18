@@ -33,3 +33,17 @@
 // const square = function (num) {
 //   return Math.pow(num, 2);
 // };
+
+// Higher Order Function
+
+function callTwice(func) {
+  func();
+  func();
+}
+
+function rollDie() {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  console.log(roll);
+}
+
+callTwice(rollDie);
