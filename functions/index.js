@@ -4,14 +4,32 @@
 
 // throwDice(999);
 
-//Everything under her is about scope
+//Everything under here is about scope
 
-let global = `I'm a global variable!`;
-function private() {
-  let priv = `I'm a private variable!`;
-  console.log(priv);
-}
-private(); //Output is "I'm a private variable"
-console.log(global); //Output is "I'm a global variable"
+// let global = `I'm a global variable!`;
+// function private() {
+//   let priv = `I'm a private variable!`;
+//   console.log(priv);
+// }
+// private(); //Output is "I'm a private variable"
+// console.log(global); //Output is "I'm a global variable"
 
-console.log(priv); //Undefined
+// console.log(priv); //Undefined
+
+// //Lexical Scopes
+// function family() {
+//   const myFamily = ["Antonio", "Josh", "Martha", "Ann"];
+//   function hello() {
+//     for (let members of myFamily) {
+//       console.log(`Hello, ${members}`);
+//     }
+//   }
+//   hello();
+// }
+// family();
+
+// // Function Expression
+
+// const square = function (num) {
+//   return Math.pow(num, 2);
+// };
