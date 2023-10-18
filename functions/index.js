@@ -34,16 +34,41 @@
 //   return Math.pow(num, 2);
 // };
 
-// Higher Order Function
+// // Higher Order Function
 
-function callTwice(func) {
-  func();
-  func();
+// function callTwice(func) {
+//   func();
+//   func();
+// }
+
+// function rollDie() {
+//   const roll = Math.floor(Math.random() * 6) + 1;
+//   console.log(roll);
+// }
+
+// callTwice(rollDie);
+
+//return functions
+
+function makeMysteryFunc() {
+  const rand = Math.random();
+  if (rand > 0.5) {
+    return function () {
+      console.log("Congrats, I am a good function!");
+    };
+  } else {
+    return function () {
+      alert("You have been infected with a computer virus.");
+    };
+  }
 }
 
-function rollDie() {
-  const roll = Math.floor(Math.random() * 6) + 1;
-  console.log(roll);
-}
+const isChild = makeBetweenFunc(0, 18);
+const isAdult = makeBetweenFunc(19, 64);
+const isSenior = makeBetweenFunc(64, 100);
 
-callTwice(rollDie);
+function makeBetweenFunc(min, max) {
+  return function (num) {
+    return num <= max && num >= min;
+  };
+}
