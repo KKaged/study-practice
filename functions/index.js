@@ -18,7 +18,7 @@
 
 // //Lexical Scopes
 // function family() {
-//   const myFamily = ["Antonio", "Josh", "Martha", "Ann"];
+const myFamily = ["Antonio", "Josh", "Martha", "Ann"];
 //   function hello() {
 //     for (let members of myFamily) {
 //       console.log(`Hello, ${members}`);
@@ -189,3 +189,18 @@ const pick2 = number.filter((n) => {
   return n % 2 === 1; // Filters out everything that is false and places everything that is true into a new array , "pick2"
 });
 console.log(pick2); //[1,  3,  5,  7,  9, 11, 13, 15, 17, 19]
+
+// Every
+const words = ["dog", "cat", "deer", "tiger"];
+
+const all = words.every((word) => {
+  // Checks if the first letter of each item in the array starts with a "d", if one is different, it will return false. If all are starting with "d" then it returns true
+  return word[0] === "d";
+});
+console.log(all);
+
+const scores = [81, 77, 12, 61, 85, 34, 97];
+const pass = scores.every((score) => {
+  return score >= 10;
+});
+console.log(pass); // True
