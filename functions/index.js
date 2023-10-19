@@ -158,3 +158,11 @@ const rollDie = () => {
 };
 
 rollDie();
+
+//Implicit Return
+
+const implicitRollDie = () => Math.floor(Math.random() * 6) + 1;
+// One line implicit return. Notice now return is gone and so are the curly brackets and paranthesis.
+//Only for a single expression. Not multiple
+
+const add = (x, y) => x + y;
