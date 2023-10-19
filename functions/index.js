@@ -115,3 +115,11 @@ const human = {
   },
 };
 human.intro();
+
+// Try / Catch
+
+try {
+  greetings.christmas("John"); // This should return an error and run to catch.
+} catch (e) {
+  console.log(`Apologies, the function ${e} does not exist.`);
+}
