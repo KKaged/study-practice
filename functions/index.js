@@ -166,3 +166,15 @@ const implicitRollDie = () => Math.floor(Math.random() * 6) + 1;
 //Only for a single expression. Not multiple
 
 const add = (x, y) => x + y;
+
+// setTimeout / setInterval
+
+setTimeout(() => {
+  console.log("You are patient!");
+}, 4000); // Notice how long it took for the code to run in the Output in VS Code, atleast 4.8 seconds!
+
+const id = setInterval(() => {
+  Math.floor(Math.random() * 5) + 1;
+}, 300);
+
+clearInterval(id);
