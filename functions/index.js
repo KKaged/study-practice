@@ -121,5 +121,21 @@ human.intro();
 try {
   greetings.christmas("John"); // This should return an error and run to catch.
 } catch (e) {
-  console.log(`Apologies, the function ${e} does not exist.`);
+  console.log(`Apologies, the function ${e} or does not exist.`);
 }
+
+// forEach
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 53, 6, 877, 346, 96];
+
+nums.forEach(function (num) {
+  if (num % 2 === 0) {
+    console.log(num);
+  }
+});
+// Should return everything that is divisible by 2
+
+nums.forEach(function (n) {
+  console.log(n * 2);
+});
+// Returns everything multiplied by 2
