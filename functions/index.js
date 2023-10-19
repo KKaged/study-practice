@@ -149,3 +149,12 @@ const lowerSeries = series.map(function (s) {
 });
 
 console.log(lowerSeries);
+
+// Arrow Functions
+
+const rollDie = () => {
+  const num = Math.floor(Math.random() * 6) + 1;
+  console.log(num);
+};
+
+rollDie();
