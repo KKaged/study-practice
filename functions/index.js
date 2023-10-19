@@ -139,3 +139,13 @@ nums.forEach(function (n) {
   console.log(n * 2);
 });
 // Returns everything multiplied by 2
+
+// Map
+
+const series = ["F1", "F2", "F3"];
+
+const lowerSeries = series.map(function (s) {
+  return s.toLowerCase(); // Creates a new array, everything is stored into 'lowerSeries'
+});
+
+console.log(lowerSeries);
