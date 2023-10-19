@@ -204,3 +204,10 @@ const pass = scores.every((score) => {
   return score >= 10;
 });
 console.log(pass); // True
+
+// Some
+
+const passSome = scores.some((score) => {
+  return score >= 70;
+});
+console.log(passSome); // True
