@@ -211,3 +211,10 @@ const passSome = scores.some((score) => {
   return score >= 70;
 });
 console.log(passSome); // True
+
+// Reduce
+
+const total = scores.reduce((total, current) => {
+  return total + current; // Returns the total value the array
+});
+console.log(total);
