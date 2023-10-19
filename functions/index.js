@@ -101,3 +101,17 @@ const greetings = {
     return "Good Evening, " + name;
   },
 };
+
+//Learning about 'this'
+
+const human = {
+  name: "John Smith",
+  age: 47,
+  nation: "United States of America",
+  intro() {
+    console.log(
+      `Hello, my name is ${this.name}. I am ${this.age} and I am from ${this.nation}`
+    );
+  },
+};
+human.intro();
