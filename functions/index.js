@@ -231,3 +231,51 @@ console.log(defaultDie());
 const lotsOfNums = [1, 24, 6, 4, 2, 23, 678, 43, 212];
 console.log(Math.max(...lotsOfNums));
 // "..." allows any iterable item to "expand" where more arguments are expected. (think of filling the rest of what you should write down)
+
+//Spread for Arrays
+
+const dogBreeds = ["PitBull", "German Sheperd", "Doberman"];
+const catBreeds = ["Siamese", "Main Coon", "Somali"];
+
+const dogAndCat = [...dogBreeds, ...catBreeds];
+
+console.log(dogAndCat);
+
+//You can also spread strings
+const hello = [..."hello"];
+console.log(hello);
+
+// Spread in Objects
+
+const canine = {
+  family: "Caninae",
+  furry: true,
+};
+const dog = { ...canine, isFriendly: true };
+console.log(dog); // Order does matter, if there are two properties with the same name, the one that comes in second or last, will overtake the previous value.
+
+// Arguments
+
+function numbers() {
+  console.log(arguments);
+}
+numbers(1, 25, 61); // This will return whichever arguments are inside the function, acting like an array
+
+// Rest
+
+function addition(...add) {
+  console.log(add);
+}
+addition(12, 12, 12, 12, 12, 12, 12, 44, 2, 4, 124, 24, 24, 5, 86, 6); // allows a function to accept and indefinite ammount of arguements as an array ; an array-like Object
+
+// Destructing
+
+const raceResults = [
+  "Max Verstappen",
+  "Sergio Perez",
+  "Lewis Hamilton",
+  "Fernando Alonso",
+  "Carlos Sainz Jr",
+];
+
+const [p1, p2, p3] = {};
