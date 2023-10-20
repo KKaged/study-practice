@@ -199,7 +199,7 @@ const all = words.every((word) => {
 });
 console.log(all);
 
-const scores = [81, 77, 12, 61, 85, 34, 97];
+const scoreßs = [81, 77, 12, 61, 85, 34, 97];
 const pass = scores.every((score) => {
   return score >= 10;
 });
@@ -218,3 +218,10 @@ const total = scores.reduce((total, current) => {
   return total + current; // Returns the total value the array
 });
 console.log(total);
+
+// Default
+
+function defaultDie(numSides = 6) {
+  return Math.floor(Math.random() * numSides) + 1;
+}
+console.log(defaultDie(12));
