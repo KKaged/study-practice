@@ -222,6 +222,12 @@ console.log(total);
 // Default
 
 function defaultDie(numSides = 6) {
-  return Math.floor(Math.random() * numSides) + 1;
+  return Math.floor(Math.random() * numSides) + 1; //When calling thi function,
 }
-console.log(defaultDie(12));
+console.log(defaultDie());
+
+// Spread
+
+const lotsOfNums = [1, 24, 6, 4, 2, 23, 678, 43, 212];
+console.log(Math.max(...lotsOfNums));
+// "..." allows any iterable item to "expand" where more arguments are expected. (think of filling the rest of what you should write down)
