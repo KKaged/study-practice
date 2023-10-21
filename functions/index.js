@@ -268,7 +268,7 @@ function addition(...add) {
 }
 addition(12, 12, 12, 12, 12, 12, 12, 44, 2, 4, 124, 24, 24, 5, 86, 6); // allows a function to accept and indefinite ammount of arguements as an array ; an array-like Object
 
-// Destructing
+// Destructing Arrays
 
 const raceResults = [
   "Max Verstappen",
@@ -278,4 +278,39 @@ const raceResults = [
   "Carlos Sainz Jr",
 ];
 
-const [p1, p2, p3] = {};
+const [p1, p2, p3, ...restOfGrid] = raceResults;
+//console.log(p1, p2, p3);
+
+console.log(restOfGrid);
+
+// Destructing Objects
+
+const driver = {
+  name: "Sergio 'Checo' Perez",
+  country: "Mexico",
+  numberID: 11,
+  team: "Red Bull Racing",
+};
+
+const { name, numberID, team } = driver; // Singled them out into their own respective variable, it still exist in the array
+console.log(name);
+
+const { team: currentTeam } = driver; // Adding a colon will let me change the name of the variable to anything
+console.log(currentTeam);
+
+const { signedYear = 2021 } = driver; // This allows me to add a variable / fallBack / default to said object
+console.log(signedYear);
+
+// Parameter Destructing
+
+const fullDriverID = ({ name, numberID }) => {
+  return `${name}, ${numberID}`;
+};
+
+const mercDriver1 = {
+  name: "Lewis Hamilton",
+  country: "Great Britian",
+  numberID: 44,
+  team: "Mercedes-AMG Petronas F1 Team",
+};
+console.log(fullDriverID(mercDriver1));
