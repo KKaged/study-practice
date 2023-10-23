@@ -1,34 +1,21 @@
-const container = document.querySelector("#container");
-const content = document.createElement("div");
-content.classList.add("content");
-content.textContent = "This is my content!";
-container.appendChild(content);
+// getElementById - Using this will let me 'get' an element from the HTML and prepare to modify it using JavaScript.
+const mainHeader = document.getElementById("main-header");
 
-const p = document.createElement("p");
-p.classList.add("p1");
-p.textContent = "Hey I'm Red!";
-container.appendChild(p);
-p.style.color = "red";
+//getElementByTagName - Using this will return an HTML collection of every element using the tag name that is inputted.
+const image = document.getElementsByTagName("img"); //This will get every 'img' element using this tag name
 
-const h3 = document.createElement("h3");
-h3.classList.add("header-3");
-h3.textContent = "I'm a blue h3!";
-container.appendChild(h3);
-h3.style.color = "blue";
+// getElementByClassName - Allows you 'get' with the class you assigned it, preparing it to be modified.
+const container = document.getElementsByClassName("container"); //I will now grab whatever has the class of 'container' assigned to it.
 
-const newDiv = document.createElement("div");
-newDiv.classList.add("div1");
-newDiv.style.color = "black";
-newDiv.style.border = "1px solid black";
-newDiv.style.backgroundColor = "pink";
-container.appendChild(newDiv);
+// querySelector -  Using this will find the first element of which you call on. You can also use this to grab class and ID's. Just use their respective symbols.
+const firstP = document.querySelector("p"); //This grabs the first 'P' element.
+const checkbox = document.querySelector("input[type=checkbox]"); // grabs the first input with the type of button.
 
-const h1 = document.createElement("h1");
-h1.classList.add("header-1");
-h1.textContent = "I am in a div!";
-newDiv.appendChild(h1);
+// querySelectorAll - like tag name but you can use it to select everything of whichever you choose to identify. Can be used to grab classes and ID's. Just use their symbols.
+const allP = document.querySelectorAll("p"); // Grabs all 'p' elements.
 
-const p2 = document.createElement("p");
-p2.classList.add("p2");
-p2.textContent = "Me too!";
-newDiv.appendChild(p2);
+// innerText - Allows you to modify the innerText of that object.
+mainHeader.innerText = "I was modified in the JavaSript File!";
+
+// innerHTML - if I wanted to add/change an element to whatever I want it to use this.
+mainHeader.innerHTML = "<p>NEW HEADER!</p>"; // In this case, it replaced the current value
