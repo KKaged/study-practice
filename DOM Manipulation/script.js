@@ -43,3 +43,25 @@ firstP.classList.remove("lorems"); //removes the class
 firstP.classList.contains("lorems"); //Checks to see if it contains a class with the assigned name, returns a boolean
 
 firstP.classList.toggle("lorems"); //When ran, it will 'toggle' the class by removing it and adding it, returns boolean
+
+// parentElement - gives you the parent element of the element you originally called on.
+const nav = firstP.parentElement; // returns the nav element
+
+//children - gives you the children elements of said element
+nav.children; //returns all the child elements in order
+
+// nextElementSibling - gives you the sibling element that comes after
+firstP.nextElementSibling; // Gives me the next P element
+
+// previousElementSibling - gives you the element that came before the element you called on.
+firstP.previousElementSibling; // returns the element before this P
+
+// createElement - creates an element of any choice
+const makeImg = document.createElement("img"); // creates an image element
+
+makeImg.src =
+  "https://images.unsplash.com/photo-1665342009088-6b0317d08053?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+makeImg.style.width = "20em";
+
+document.body.appendChild(makeImg);
