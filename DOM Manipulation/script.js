@@ -62,6 +62,6 @@ const makeImg = document.createElement("img"); // creates an image element
 makeImg.src =
   "https://images.unsplash.com/photo-1665342009088-6b0317d08053?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
-makeImg.style.width = "20em";
+makeImg.style.width = "20em"; //Makes the image's width smaller.
 
-document.body.appendChild(makeImg);
+document.body.appendChild(makeImg); //Pushes it out into the main site
