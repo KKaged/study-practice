@@ -12,10 +12,34 @@ const firstP = document.querySelector("p"); //This grabs the first 'P' element.
 const checkbox = document.querySelector("input[type=checkbox]"); // grabs the first input with the type of button.
 
 // querySelectorAll - like tag name but you can use it to select everything of whichever you choose to identify. Can be used to grab classes and ID's. Just use their symbols.
-const allP = document.querySelectorAll("p"); // Grabs all 'p' elements.
+const allP = document.querySelector("p"); // Grabs all 'p' elements.
 
 // innerText - Allows you to modify the innerText of that object.
 mainHeader.innerText = "I was modified in the JavaSript File!";
 
 // innerHTML - if I wanted to add/change an element to whatever I want it to use this.
 mainHeader.innerHTML = "<p>NEW HEADER!</p>"; // In this case, it replaced the current value
+
+// .id attribute - Can use this to change the elements ID's name to whatever you choose for it to be.
+mainHeader.id = "newID"; // The header's ID is 'newID'
+
+// .styles attribute - This allows you to change the style of whatever you truly want. Everything is camelCase and in ''.
+mainHeader.style.fontSize = "2rem"; //Changes the font size of the header.
+
+// Getting all the computed styles of any element
+window.getComputedStyle(mainHeader); //This gives us all of the styles set onto that element
+
+// setAttribute , getAttribute - These methods allow you to get the elements attribute and set the attribute
+
+allP.getAttribute(""); // Returns null since their is no class.
+
+allP.setAttribute("class", "purple"); // sets a class and is named purple
+
+// classList - allows you to mess with the class attribute within the element you have chosen
+firstP.classList.add("lorems"); //adds the class
+
+firstP.classList.remove("lorems"); //removes the class
+
+firstP.classList.contains("lorems"); //Checks to see if it contains a class with the assigned name, returns a boolean
+
+firstP.classList.toggle("lorems"); //When ran, it will 'toggle' the class by removing it and adding it, returns boolean
