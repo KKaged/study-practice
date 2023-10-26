@@ -9,3 +9,17 @@ btn.onclick = function () {
 btn.onmouseenter = function () {
   btn.style.color = "blue";
 };
+
+// addEventListener
+const btn2 = document.querySelector("#test2");
+
+btn2.addEventListener("dblclick", function () {
+  alert("You pressed the second button!");
+});
+
+// {once : true} - if the function is ran once then the event listener is removed completely.
+const btn3 = document.querySelector("#test3");
+const scream = () => {
+  alert("AAAAAAAAAAAH");
+};
+btn3.addEventListener("click", scream, { once: true }); // On the second press, no event listener is ran
