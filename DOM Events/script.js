@@ -23,3 +23,29 @@ const scream = () => {
   alert("AAAAAAAAAAAH");
 };
 btn3.addEventListener("click", scream, { once: true }); // On the second press, no event listener is ran
+
+// Keyboard events
+
+const input = document.querySelector("#input");
+input.addEventListener("keydown", function (e) {
+  console.log(e.key);
+});
+
+//Form Events and PreventDefault
+const form = document.querySelector("#shelterForm");
+const formInput = document.querySelector("#formInput");
+
+form.addEventListener("submit", function (f) {
+  //Whenever You submit the form, the function runs
+  f.preventDefault();
+  console.log(`You Submitted "${formInput.value}"`);
+  onSubmit();
+  formInput.value = "";
+});
+
+function onSubmit() {
+  //This runs because of the eventListener above.
+  const createP = document.createElement("p");
+  createP.innerText = formInput.value;
+  document.body.appendChild(createP);
+}
