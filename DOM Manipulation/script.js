@@ -63,5 +63,26 @@ makeImg.src =
   "https://images.unsplash.com/photo-1665342009088-6b0317d08053?auto=format&fit=crop&q=80&w=2787&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 makeImg.style.width = "20em"; //Makes the image's width smaller.
+nav.appendChild(makeImg); //Pushes it out into the main site
 
-document.body.appendChild(makeImg); //Pushes it out into the main site
+firstP.append("This was appended using P!");
+firstP.prepend("This was prepended!!");
+
+// instertAdjacentElement - allows you to choose what to place wherever you want to place.
+const justWords = document.createElement("p");
+justWords.append("This was added using instertAdjacentElement!");
+const nwHeader = document.querySelector("h1");
+nwHeader.insertAdjacentElement("beforeend", justWords); // Adds justWords right before the element ends.
+
+// after -  can place any element "after" your chosen element
+
+const nwP = document.createElement("p");
+nwP.innerText = "Just a random P element";
+nwHeader.after(nwP);
+
+// removeChild,  remove - removes the child, first you'll to call on the parent element
+
+const img = document.querySelector("img");
+img.parentElement; // You get the parent element of said element.
+nav.removeChild(img); // Removes the img element.
+img.remove(); // This would do the same thing, just more direct
