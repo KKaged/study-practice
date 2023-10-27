@@ -49,3 +49,14 @@ function onSubmit() {
   createP.innerText = formInput.value;
   document.body.appendChild(createP);
 }
+
+// Input & Change
+
+input.addEventListener("input", function () {
+  // Runs whenever the input value is changed.
+  console.log(input.value);
+});
+
+input.addEventListener("change", function () {
+  console.log(input.value); // Runs when you "loose focus on the input"
+});
