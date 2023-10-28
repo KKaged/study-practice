@@ -60,3 +60,49 @@ input.addEventListener("input", function () {
 input.addEventListener("change", function () {
   console.log(input.value); // Runs when you "loose focus on the input"
 });
+
+// stopPropagation
+// Event Bubbling and how to deal with it
+//Should alert when I press the button by alerting that I pressed the selected element and the container
+
+const container = document.querySelector(".container");
+const h2 = document.querySelector("#eventProp");
+const bubbleInput = document.querySelector("#bubbleInput");
+const bubbleButt = document.querySelector("#bubbleButt");
+
+container.addEventListener("click", function (z) {
+  alert("You pressed the container!");
+  z.stopPropagation();
+});
+
+h2.addEventListener("click", function (z) {
+  alert("You pressed the h2");
+  z.stopPropagation();
+});
+
+bubbleInput.addEventListener("click", function (z) {
+  alert("You pressed the input!");
+  z.stopPropagation();
+});
+
+bubbleButt.addEventListener("click", function (z) {
+  alert("You pressed the button!");
+  z.stopPropagation();
+});
+
+// Event Delegation
+const textInput = document.querySelector("#textInput");
+const textButton = document.querySelector("#textButton");
+const textUL = document.querySelector("#textUL");
+
+textButton.addEventListener("click", function () {
+  const newElement = document.createElement("li");
+  newElement.innerText = textInput.value;
+  textUL.appendChild(newElement);
+  textInput.value = "";
+});
+
+textUL.addEventListener("click", function (e) {
+  console.log(e.target); // logs the clicked target
+  e.target.remove(); // Removes the targeted element
+});
