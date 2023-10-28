@@ -1,0 +1,60 @@
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.container {
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 25em;
+    padding: 5em;
+    border-radius: 5em;
+}
+
+#addP1 {
+    width: 7em;
+    height: 5em;
+    color: white;
+    background-color: lightblue;
+    border-style: none;
+}
+
+#addP2 {
+    width: 7em;
+    height: 5em;
+    color: white;
+    background-color: lightsalmon;
+    border-style: none;
+
+
+}
+
+#reset {
+    width: 7em;
+    height: 5em;
+    color: white;
+    background-color: lightseagreen;
+    border-style: none;
+}
+
+#playTo {
+    height: 25px;
+    align-self: center;
+}
+
+.content {
+    display: flex;
+}
