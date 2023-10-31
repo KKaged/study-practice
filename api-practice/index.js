@@ -72,3 +72,30 @@ const axioscrncy = async () => {
   }
 };
 axioscrncy();
+
+// Using axios to change API headers
+
+// const getDadJoke = async () => {
+//   const config = { headers: { Accept: "application/json" } };
+//   const res = await axios.get("https://icanhazdadjoke.com/", config);
+//   dadHeader.inner = res.data.joke;
+// };
+
+//Using DOM Manipulation
+
+const dadButton = document.querySelector("#dadButton");
+const dadHeader = document.querySelector("#dadHeader");
+
+dadButton.addEventListener(
+  "click",
+  (dadJokeText = async () => {
+    const jokeText = await getDadJoke();
+    dadHeader.innerHTML = jokeText;
+  })
+);
+
+getDadJoke = async () => {
+  const config = { headers: { Accept: "application/json" } };
+  const res = await axios.get("https://icanhazdadjoke.com/", config);
+  return res.data.joke;
+};
