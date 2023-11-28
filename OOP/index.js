@@ -71,3 +71,25 @@ CreateColor.prototype.rgba = function (a = 1.0) {
 
 const red = new CreateColor(255, 0, 0);
 console.log(red.rgb);
+
+//Classes
+class Colors {
+  constructor(r, g, b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+  }
+  hex() {
+    const { r, g, b } = this; //Extracts the properties of the "this" object
+    console.log(
+      "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1) //Method
+    );
+  }
+  rgba(a = 1.0) {
+    const { r, g, b } = this; //Extracts the properties of the "this" object
+    console.log(`rgba(${r},${g},${b},${a})`);
+  }
+}
+const green = new Colors(0, 255, 0, 0.7);
+green.rgba();
+green.hex();
