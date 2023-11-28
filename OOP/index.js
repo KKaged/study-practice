@@ -1,5 +1,3 @@
-const { AlertIcon } = require("@chakra-ui/react");
-
 //You can make your own methods my editing the objects prototype -  You change the template of the prototype, You can add anything to any prototype
 String.prototype.yell = function () {
   console.log(`IT'S ${this.toUpperCase()}!!! RUNNN`);
@@ -93,3 +91,35 @@ class Colors {
 const green = new Colors(0, 255, 0, 0.7);
 green.rgba();
 green.hex();
+
+// More Classes Practice
+
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    console.log(`${this.name} is eating food.`);
+  }
+}
+
+class Dog extends Pet {
+  bark() {
+    console.log("Woof!");
+  }
+}
+
+class Cat extends Pet {
+  constructor(name, age, livesLeft = 9) {
+    super(name, age); //Calls from the Pet constructor and used the properties of that constructor
+    this.livesLeft = livesLeft;
+  }
+  meow() {
+    console.log("Meow!");
+  }
+}
+
+const dulce = new Dog("Dulce", 8);
+dulce.eat();
+dulce.bark();
